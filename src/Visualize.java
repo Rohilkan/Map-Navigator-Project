@@ -8,7 +8,6 @@ import java.util.Set;
 /**
  * Class for creating visualizations of graphs and routes
  * representing latitude-longitude points using StdDraw.
- * @author Brandon Fain
  */
 public class Visualize {
     public static final double RADIUS = 6378137.0; /* in meters on the equator */

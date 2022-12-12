@@ -7,8 +7,6 @@ import java.util.*;
 /**
  * Models a weighted graph of latitude-longitude points
  * and supports various distance and routing operations.
- * To do: Add your name(s) as additional authors
- * @author Brandon Fain
  *
  */
 public class GraphProcessor {

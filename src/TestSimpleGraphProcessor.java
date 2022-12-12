@@ -19,8 +19,6 @@ import java.util.*;
  * Testing GraphProcessor on the family of simple data
  * Intended to help debug with simple tests
  * 
- * @author Emily Du
- * @author Havish Malladi
  */
 
 public class TestSimpleGraphProcessor {

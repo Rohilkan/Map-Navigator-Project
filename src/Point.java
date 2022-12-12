@@ -2,7 +2,6 @@
  * Represents an immutable latitude-longitude coordinate point.
  * Uses degrees from -180.0 to 180.0.
  * Point objects are Hashable, Comparable, and printable.
- * @author Brandon Fain
  */
 public class Point implements Comparable<Point> {
     private static final double EARTH_RADIUS = 3963.2;
