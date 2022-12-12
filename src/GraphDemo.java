@@ -16,8 +16,8 @@ public class GraphDemo {
     public static void main(String[] args) throws Exception {
         
         GraphProcessor demoGraph = new GraphProcessor();
-        FileInputStream file = new FileInputStream("/Users/rohilk/Desktop/CS201/p6-route/data/usa.graph");
-        FileInputStream citiesFile = new FileInputStream("/Users/rohilk/Desktop/CS201/p6-route/data/uscities.csv");
+        FileInputStream file = new FileInputStream("~/data/usa.graph");
+        FileInputStream citiesFile = new FileInputStream("~/data/uscities.csv");
         demoGraph.initialize(file);
 
         Scanner reader = new Scanner(System.in);
@@ -53,8 +53,8 @@ public class GraphDemo {
         double afterDist = System.nanoTime();
         double timeDist = (afterDist - beforeDist) / 1e6;
 
-        String visFile = "/Users/rohilk/Desktop/CS201/p6-route/data/usa.vis"; 
-        String background = "/Users/rohilk/Desktop/CS201/p6-route/images/usa.png";
+        String visFile = "~/data/usa.vis"; 
+        String background = "~/images/usa.png";
         Visualize test = new Visualize(visFile, background);
         test.drawRoute(route);
 
