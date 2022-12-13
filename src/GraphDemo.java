@@ -15,22 +15,22 @@ public class GraphDemo {
     public static void main(String[] args) throws Exception {
         
         GraphProcessor demoGraph = new GraphProcessor();
-        FileInputStream file = new FileInputStream("~/data/usa.graph");
-        FileInputStream citiesFile = new FileInputStream("~/data/uscities.csv");
+        FileInputStream file = new FileInputStream("mapNavigator/data/usa.graph");
+        FileInputStream citiesFile = new FileInputStream("mapNavigator/data/uscities.csv");
         demoGraph.initialize(file);
 
         Scanner reader = new Scanner(System.in);
 
-        System.out.print("Enter the latitude of your starting location");
+        System.out.print("Enter the latitude of your starting location: ");
         double[] cityACoordinates = new double[2];
         cityACoordinates[0] = reader.nextDouble();
-        System.out.print("Enter the longitude of your starting location");
+        System.out.print("Enter the longitude of your starting location: ");
         cityACoordinates[1] = reader.nextDouble();
 
-        System.out.print("Enter the latitude of your ending location");
+        System.out.print("Enter the latitude of your ending location: ");
         double[] cityBCoordinates = new double[2];
         cityBCoordinates[0] = reader.nextDouble();
-        System.out.print("Enter the longitude of your ending location");
+        System.out.print("Enter the longitude of your ending location: ");
         cityBCoordinates[1] = reader.nextDouble();
 
         Point cityA = new Point(cityACoordinates[0], cityACoordinates[1]);
@@ -52,8 +52,8 @@ public class GraphDemo {
         double afterDist = System.nanoTime();
         double timeDist = (afterDist - beforeDist) / 1e6;
 
-        String visFile = "~/data/usa.vis"; 
-        String background = "~/images/usa.png";
+        String visFile = "mapNavigator/data/usa.vis"; 
+        String background = "mapNavigator/images/usa.png";
         Visualize test = new Visualize(visFile, background);
         test.drawRoute(route);
 
