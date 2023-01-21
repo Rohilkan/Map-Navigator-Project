@@ -38,13 +38,11 @@ public class Point implements Comparable<Point> {
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof Point)) { 
-            return false; 
-        }
+        if (!(o instanceof Point)) return false; 
+
         Point p = (Point) o;
-        if ((lat == p.lat) && (lon == p.lon)) {
-            return true;
-        }
+        if ((lat == p.lat) && (lon == p.lon)) return true;
+        
         return false;
     }
 
@@ -64,7 +62,8 @@ public class Point implements Comparable<Point> {
     @Override
     public int compareTo(Point p) {
         int latComp = Double.compare(lat, p.lat);
-        if (latComp != 0) { return latComp; }
+        if (latComp != 0) return latComp;
+
         return Double.compare(lon, p.lon);
     }
 }
